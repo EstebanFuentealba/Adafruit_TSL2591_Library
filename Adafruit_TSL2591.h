@@ -155,7 +155,7 @@ public:
 
   /* Unified Sensor API Functions */
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   Adafruit_I2CDevice *i2c_dev = NULL; ///< Pointer to I2C bus interface
