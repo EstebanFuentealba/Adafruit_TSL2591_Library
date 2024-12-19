@@ -458,15 +458,15 @@ bool Adafruit_TSL2591::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the overall sensor_t data including the type, range and
+    @brief  Gets the overall sensor_adafruit_t data including the type, range and
    resulution
-    @param  sensor Pointer to Adafruit_Sensor sensor_t object that will be
+    @param  sensor Pointer to Adafruit_Sensor sensor_adafruit_t object that will be
    filled with sensor type data
 */
 /**************************************************************************/
-void Adafruit_TSL2591::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_TSL2591::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "TSL2591", sizeof(sensor->name) - 1);
